@@ -2,7 +2,7 @@ package com.example.coordenadas_geograficas;
 
 public class Complejo {
     //declaración de atributos
-    private double real, imaginario;
+    protected double real, imaginario;
 
     //declaración de constructor
     public Complejo(double real, double imaginario) {
@@ -10,9 +10,26 @@ public class Complejo {
         this.imaginario= imaginario;
     }
 
+    public double getReal() {
+        return real;
+    }
+
+    public void setReal(double real) {
+        this.real = real;
+    }
+
+    public double getImaginario() {
+        return imaginario;
+    }
+
+    public void setImaginario(double imaginario) {
+        this.imaginario = imaginario;
+    }
+
     //declaración de métodos
     /** Transcribe el complejo a String.
      * @returnun string con la parte entera y la imaginaria */
+    @Override
     public String toString() {
         return real + "+"+ imaginario + "i";
     }
@@ -22,5 +39,14 @@ public class Complejo {
     public void suma(Complejo v) {
         real = real + v.real;
         imaginario = imaginario + v.imaginario;
+    }
+
+    public void suma(double re, double im) {
+        real = real + re;
+        imaginario = imaginario + im;
+    }
+
+    public void suma(double re) {
+        real = real + re;
     }
 }

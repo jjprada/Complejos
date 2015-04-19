@@ -2,13 +2,18 @@ package com.example.coordenadas_geograficas;
 
 public class GeoPunto {
     // Atributos
-    private int mLongitud;
-    private int mLatitud;
+    private double mLongitud;
+    private double mLatitud;
 
     // Constructor
     public GeoPunto (double longitud, double latitud){
-        this.mLongitud = (int)(longitud * 1E6);
-        this.mLatitud = (int)(latitud * 1E6);
+        this.mLongitud = longitud;
+        this.mLatitud = latitud;
+    }
+
+    public GeoPunto (int longitud, int latitud){
+        this.mLongitud = longitud;
+        this.mLatitud = latitud;
     }
 
     // Métodos
